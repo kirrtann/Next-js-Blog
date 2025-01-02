@@ -4,6 +4,7 @@ import { imageDatajson } from '../Image/Image';
 import Image from 'next/image';
 import Footer from '../Footer/page';
 import Navbar from '../Navbar/page';
+import Link from 'next/link';
 
 
 
@@ -24,10 +25,11 @@ const Main = () => {
         <div className='max-w-[940px] py-[50px] mx-auto gap'>
           <h1 className='text-white text-[26px] mb-[22px] text-center'>Latest Work</h1>
           <div className=' grid sm:grid-cols-3'>
-            {imageDatajson.map((image: { url: string, }, index: number,) => (
-              <div key={index} className='mb-[20px]'>
-                <Image src={image.url} alt='photo' width={1000} height={300} className='px-[10px] hover:opacity-75 ' />
-              </div>
+            {imageDatajson.map((image: { url: string, }, index: number) => (
+              <Link href={"/blog/blogdetail"} key={index}  className='  mb-[20px]'>
+              
+                <Image src={image.url} alt='photo' width={1000} height={300} className='px-[10px] rounded hover:opacity-75 ' />
+              </Link>
             ))}
           </div>
 

@@ -20,7 +20,9 @@ export default {
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
       },
-      
+      fontweight:{
+        smalll:'font-weight: 301;'
+             }
     },
   },
   plugins: [],
